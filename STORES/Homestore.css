@@ -3,20 +3,27 @@
   padding: 0;
   font-family: sans-serif;
 }
+img{
+  overflow:auto;
+}
 
 .navbar{
   width: 85%;
   margin: auto;
-  padding: 14px 20px;
+  padding: 35px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* Adjust margin-right to move navbar to the right */
+  margin-right: 100px;
 }
 .logo{
   width: 120px;
   cursor: pointer;
   float: left;
   padding: 14px 20px;
+  /* Adjust margin-left to move logo to the left */
+  margin-left: 100px;
 }
 .navbar ul li{
   list-style: none;
@@ -33,7 +40,7 @@
   content: '';
   height: 3px;
   width: 0;
-  background: #5c4033;
+  background: #ffffff;
   position: absolute;
   left: 0;
   bottom: -10px;
@@ -42,3 +49,9 @@
 .navbar ul li:hover::after{
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
